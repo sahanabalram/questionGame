@@ -49,6 +49,17 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
         let qusArray = [questions.q1, questions.q2, questions.q3, questions.q4, questions.q5, questions.q6, questions.q7,
             questions.q8
         ];
+
+        // function to render any remaining questions
+
+        function questionRender() {
+            if(qusIndex <=qusArray.length -1) {
+                document.querySelector("#question").innerHTML = qusArray[qusIndex][0];
+            } else {
+                document.querySelector("#questions").innerHTML = "Great Answers Hope You had Fun!!! Game Over";
+                document.querySelector("score").innerHTML = "Final Score:" + score + " out of " + qusArray.length; 
+            }
+        }
     </script>
 </body>
 
