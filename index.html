@@ -29,10 +29,10 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
         <h3>Question</h3>
     </div>
     <script>
-        // Declare variables
+        // Questions declared as object
         let questions = {
             q1: ["The sky is dark", "f"],
-            q2: ["There are 366 days in a leap year","t"],
+            q2: ["There are 366 days in a leap year", "t"],
             q3: ["Bananas are fruits", "t"],
             q4: ["The power of the cell is mitochondria", "t"],
             q5: ["Venus is the third planet in the solar system", "f"],
@@ -42,8 +42,13 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
         }
 
         // declare intial score
-
         let score = 0;
+        // declare index of the current question
+        let qusIndex = 0;
+        // declare array of questions
+        let qusArray = [questions.q1, questions.q2, questions.q3, questions.q4, questions.q5, questions.q6, questions.q7,
+            questions.q8
+        ];
     </script>
 </body>
 
