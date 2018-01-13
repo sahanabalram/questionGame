@@ -66,6 +66,19 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
         function scoreUpdate() {
             document.querySelector("#score").innerHTML = "Score:" + score;
         }
+
+        // actual logic
+        // function to start the game
+        questionRender();
+        scoreUpdate();
+
+        // user presses the key, following function will run.
+        document.onkeyup =function(event) {
+            // if no more remaining questions to ask
+            if(qusIndex === qusArray.length) {
+                return;
+            }
+        }
     </script>
 </body>
 
