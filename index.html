@@ -78,6 +78,17 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
             if(qusIndex === qusArray.length) {
                 return;
             }
+            // check which key the user pressed, make it lowercase since the answers are stored as lowercase
+            let userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+            // check to see if t or f keys were pressed
+            if(userGuess === 't' || userGuess === 'f') {
+                // if the answer is correct alert the user and update the score
+                if(userGuess === qusArray[qusIndex][1]) {
+                    alert("Great Job Correct Answer");
+                    score++;
+                    scoreUpdate();
+                }
+            }
         }
     </script>
 </body>
