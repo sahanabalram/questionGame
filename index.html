@@ -87,9 +87,14 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
                     alert("Great Job Correct Answer");
                     score++;
                     scoreUpdate();
+                } else {
+                    alert("Not so Great Wrong Answer");
                 }
+                // next question to display if there is left.
+                qusIndex++;
+                questionRender();
             }
-        }
+        };
     </script>
 </body>
 
