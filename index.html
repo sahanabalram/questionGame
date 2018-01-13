@@ -53,12 +53,18 @@ HINT: Don't worry about having DRY code to start with. Just focus on getting wor
         // function to render any remaining questions
 
         function questionRender() {
-            if(qusIndex <=qusArray.length -1) {
+            if (qusIndex <= qusArray.length - 1) {
                 document.querySelector("#question").innerHTML = qusArray[qusIndex][0];
             } else {
                 document.querySelector("#questions").innerHTML = "Great Answers Hope You had Fun!!! Game Over";
-                document.querySelector("score").innerHTML = "Final Score:" + score + " out of " + qusArray.length; 
+                document.querySelector("score").innerHTML = "Final Score:" + score + " out of " + qusArray.length;
             }
+        }
+
+        // update the score
+
+        function scoreUpdate() {
+            document.querySelector("#score").innerHTML = "Score:" + score;
         }
     </script>
 </body>
